@@ -47,6 +47,7 @@
 7. 선택한 프레임워크에 대한 이해 및 활용 능력
 
 # ERD
+<img width="1001" alt="스크린샷 2022-11-06 오후 9 15 25" src="https://user-images.githubusercontent.com/64879792/200170167-b5e0a9d4-9190-4e15-beab-09f4e85f9ae1.png">
 
 ## 데이터베이스 설정 
 - 이모지 저장을 위해 데이터베이스  charset을 'utf8mb4' 설정 해 준다.
