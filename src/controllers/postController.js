@@ -23,7 +23,7 @@ const getList = async(req,res) => {
 
 /**
  *  @게시글 작성
- *  @route POST /
+ *  @route POST /post/register
  *  @access public
  *  @err
  */
@@ -40,8 +40,50 @@ const registerPost =  async(req,res) => {
 
 }
 
+/**
+ *  @게시글 수정
+ *  @route PUT /post/edit
+ *  @access public
+ *  @err
+ */
+
+const editPost = async(req,res) => {
+
+  const { post_id, title ,content, pwd } = req.body;
+  
+  await postService.editPost(post_id,pwd, title ,content);
+
+  return res.status(statusCode.OK).send(
+    util.success(statusCode.OK, responseMessage.POST_EDITED)
+  );
+
+
+}
+
+/**
+ *  @게시글 수정
+ *  @route PUT /post/edit
+ *  @access public
+ *  @err
+ */
+
+ const deletePost = async(req,res) => {
+
+  const { post_id, pwd } = req.body;
+  
+  await postService.deletePost(post_id, pwd);
+
+  return res.status(statusCode.OK).send(
+    util.success(statusCode.OK, responseMessage.POST_DELETED)
+  );
+
+
+}
+
 module.exports = {
 
     getList,
-    registerPost
+    registerPost,
+    editPost,
+    deletePost
 }

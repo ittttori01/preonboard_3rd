@@ -7,5 +7,7 @@ module.exports = {
   SUCCESS : "성공",
 
   //게시글
-  POST_REGISTERED : "게시물이 등록되었습니다."
+  POST_REGISTERED : "게시물이 등록되었습니다.",
+  POST_EDITED :"게시물이 수정 되었습니다.",
+  POST_DELETED :"게시물이 삭제 되었습니다."
 };
