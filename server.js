@@ -22,7 +22,7 @@ const startServer = async () => {
             database.destroy()
         })
 
-    server.listen(PORT, () => {
+    server.listen(PORT,() => {
         console.log(`Listening on Port ${PORT}`);
     });
 }
