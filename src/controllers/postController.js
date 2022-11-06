@@ -3,17 +3,18 @@ const statusCode = require("../constants/statusCode");
 const util = require("../lib/util");
 const postService = require("../services/postService");
 
+
 /**
- *  @리스트
+ *  @게시글 목록 조회
  *  @route GET /post/list
  *  @access public
  *  @err
  */
 
 const getList = async(req,res) => {
-    
-    const list = await postService.getList();
-    
+  
+  const list = await postService.getList();
+
     return res.status(statusCode.OK).send(
         util.success(statusCode.OK, responseMessage.SUCCESS, {
           list: list,
@@ -61,8 +62,8 @@ const editPost = async(req,res) => {
 }
 
 /**
- *  @게시글 수정
- *  @route PUT /post/edit
+ *  @게시글 삭제
+ *  @route DELETE /post/delete
  *  @access public
  *  @err
  */
